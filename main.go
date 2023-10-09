@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/gofiber/fiber/v2"
@@ -27,5 +28,6 @@ func main() {
 	if port == "" {
 		port = "3000"
 	}
+	fmt.Println("port: " + port)
 	app.Listen(":" + port)
 }
