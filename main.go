@@ -10,6 +10,10 @@ func main() {
 	// create fiber instance
 	app := fiber.New()
 
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello")
+	})
+
 	app.Get("/hello", func(c *fiber.Ctx) error {
 		return c.SendString("World")
 	})
